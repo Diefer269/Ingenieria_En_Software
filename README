@@ -1,0 +1,27 @@
+# Diseño de Software para Sistema de Reservas de Hoteles.
+## Materia: Ingeniería de Software.
+## Integrantes:
+1. Johanna Nicole Del Pezo Calderon
+2. Fernando Andres Flores Salazar
+
+### Framework utilizado (Django):
+![django](https://github.com/user-attachments/assets/2b5c3f0c-9dfb-4d1f-b246-74d94756bc82)
+
+### Pruebas unitarias al software desarrollado (Coverage.py):
+![coverage](https://github.com/user-attachments/assets/17d933d4-5379-4511-b17d-7941bcfc77d7)
+
+### Para el Funcionamiento del servidor
+## En la terminal ejucutar el comando:
+py -m venv env
+
+## Luego Moverse al directorio de SistemaHoteles
+## Estando en el directorio ejecutar el archivo de requerimientos con el comando:
+pip install -r requeriments.txt
+
+## Una vez instalado los requerimientos
+## Iniciar servidor con el comando:
+py ./manage.py runserver
+
+## Ejecuta la linea de comando con el HTTP del servidor en su navegador
+## Una vez en el navegador agregar al HTTp el /swagger:
+http://127.0.0.1:8000/swagger/ ##ejemplo
