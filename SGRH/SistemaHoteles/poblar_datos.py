@@ -12,15 +12,15 @@ class Command(BaseCommand):
     help = 'Pobla la base de datos con datos de prueba para el sistema de hoteles'
 
     def handle(self, *args, **kwargs):
-        # 1. Crear clientes
+        # 1. Crear datos clientes
         cliente1 = Cliente.objects.create(nombre="Luis Sánchez", documento="1100110011", email="luis@mail.com", telefono="099111222")
         cliente2 = Cliente.objects.create(nombre="Elena Torres", documento="2200220022", email="elena@mail.com", telefono="099333444")
 
-        # 2. Crear habitaciones
+        # 2. Crear las habitaciones
         habitacion1 = Habitacion.objects.create(tipo="Suite", estado="disponible", precio=100)
         habitacion2 = Habitacion.objects.create(tipo="Doble", estado="disponible", precio=60)
 
-        # 3. Crear usuarios
+        # 3. Crear usuarios de prueba
         admin = Usuario.objects.create_user(username="admin1", password="1234", rol="administrador", is_staff=True, is_superuser=True)
         recep = Usuario.objects.create_user(username="recep1", password="1234", rol="recepcionista", is_staff=True)
         gerente = Usuario.objects.create_user(username="gerente1", password="1234", rol="gerente", is_staff=True)
@@ -29,7 +29,7 @@ class Command(BaseCommand):
         pago1 = Pago.objects.create(monto=100, tipo_pago="Efectivo", estado="exitoso")
         pago2 = Pago.objects.create(monto=60, tipo_pago="Tarjeta", estado="exitoso")
 
-        # 5. Crear reservas
+        # 5. Crear las reservas
         reserva1 = Reserva.objects.create(
             cliente=cliente1,
             habitacion=habitacion1,
