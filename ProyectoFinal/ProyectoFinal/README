@@ -11,20 +11,35 @@
 ![coverage](https://github.com/user-attachments/assets/17d933d4-5379-4511-b17d-7941bcfc77d7)
 
 ### Para el Funcionamiento del servidor
-## En la terminal ejucutar el comando:
-py -m venv env
 
-## Luego Moverse al directorio de SistemaHoteles
-## Estando en el directorio ejecutar el archivo de requerimientos con el comando:
+### Levamtamiento Backend
+
+## Primero eliminar la carpeta env del proyecto, para evitar errores posibles.
+##Luego, Moverse al directorio de SistemaHoteles
+## En la terminal ejucutar el comando:
+py -m venv env      ;#Para poder levantar el entorno virtual
+
+## Luego
+.\env\Scripts\activate
+
+## Ejecutar el archivo de requerimientos con el comando:
 pip install -r requeriments.txt
 
 ## Una vez instalado los requerimientos
 ## Iniciar servidor con el comando:
-py ./manage.py runserver
+py .\manage.py runserver
 
 ## Ejecuta la linea de comando con el HTTP del servidor en su navegador
 ## Una vez en el navegador agregar al HTTp el /swagger:
 http://127.0.0.1:8000/swagger/ ##ejemplo
+
+### Levantamiento del frontend
+
+## En una nueva terminal
+## Moverse al directorio del Frontend
+## Luego, moverse al otro directorio de frontend y en la terminal ejecutar:
+npm start
+
 
 ### Ejecución Pruebas Unitarias 
 ## Es importante tener iniciado el entorno virtual
