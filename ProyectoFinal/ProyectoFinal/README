@@ -25,3 +25,22 @@ py ./manage.py runserver
 ## Ejecuta la linea de comando con el HTTP del servidor en su navegador
 ## Una vez en el navegador agregar al HTTp el /swagger:
 http://127.0.0.1:8000/swagger/ ##ejemplo
+
+### Ejecución Pruebas Unitarias 
+## Es importante tener iniciado el entorno virtual
+py -m venv env
+## Luego movernos al directorio del entorno virtual
+.\env\Scripts\activate
+## dentro del env, nos movemos al directorio principal del sistema de hoteles
+cd .\SistemaHoteles
+## Instalamos los requerimientos dentro del sistema de hoteles
+pip install -r requeriments.txt
+## Usamos el siguiente comando para ejecutar pruebas automatizadas en un proyecto de Django mientras se mide la cobertura del código
+coverage run --source='.' manage.py test
+## Luego, usamos el siguiente comando para mostrar en la terminal un resumen de la cobertura del código después de haber ejecutado pruebas con coverage run
+coverage report 
+## Usamos el siguiente comando para generar un informe visual en HTML de la cobertura del código fuente después de ejecutar pruebas con coverage.
+coverage html
+## Eso nos ejecutara un informe dentro de sistema de Hoteles.
+## Luego para poder visualizar el informe usamos el siguiente comando:
+start .\htmlcov\index.html
